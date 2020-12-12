@@ -23,7 +23,7 @@ app.use(bodyParser.json({
 }));
 
 app.use(function (req, res, next) {
-    let allowedOrigins = ['http://localhost:4200','https://snooze-clues.herokuapp.com/'];
+    let allowedOrigins = ['http://localhost:4200','https://snooze-clues.herokuapp.com'];
     let currentOrigin = req.headers.origin;
     if(allowedOrigins.indexOf(currentOrigin) > -1) {
         res.setHeader('Access-Control-Allow-Origin', currentOrigin);
